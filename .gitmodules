@@ -198,3 +198,9 @@
 	path = ports/broadcom/firmware
 	url = https://github.com/raspberrypi/rpi-firmware.git
 	branch = master
+[submodule "frozen/Adafruit_CircuitPython_HT16K33"]
+	path = frozen/Adafruit_CircuitPython_HT16K33
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HT16K33
+[submodule "frozen/Adafruit_CircuitPython_Debouncer"]
+	path = frozen/Adafruit_CircuitPython_Debouncer
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Debouncer
