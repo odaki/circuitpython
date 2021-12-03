@@ -1,9 +1,9 @@
 /*
- * This file is part of the MicroPython project, http://micropython.org/
+ * This file is part of the Micro Python project, http://micropython.org/
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2018 Noralf Trønnes
+ * Copyright (c) 2021 Scott Shawcroft for Adafruit Industries
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,12 +24,11 @@
  * THE SOFTWARE.
  */
 
-#ifndef MICROPY_INCLUDED_SHARED_BINDINGS_RTC___INIT___H
-#define MICROPY_INCLUDED_SHARED_BINDINGS_RTC___INIT___H
+#pragma once
 
 #include "py/obj.h"
 
-extern void rtc_reset(void);
-extern mp_obj_t rtc_get_time_source_time(void);
+extern const mp_obj_type_t mcu_pin_type;
 
-#endif  // MICROPY_INCLUDED_SHARED_BINDINGS_RTC___INIT___H
+#define PIN_PREFIX_VALUES { &mcu_pin_type },
+#define PIN_PREFIX_FIELDS mp_obj_base_t base;
