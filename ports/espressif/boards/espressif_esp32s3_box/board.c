@@ -3,7 +3,7 @@
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2020 microDev
+ * Copyright (c) 2020 Scott Shawcroft for Adafruit Industries
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,14 +24,43 @@
  * THE SOFTWARE.
  */
 
-#ifndef MICROPY_INCLUDED_ESPRESSIF_PERIPHERALS_PCNT_HANDLER_H
-#define MICROPY_INCLUDED_ESPRESSIF_PERIPHERALS_PCNT_HANDLER_H
+#include "supervisor/board.h"
+#include "mpconfigboard.h"
+#include "shared-bindings/microcontroller/Pin.h"
 
-#include "driver/pcnt.h"
-#include "soc/pcnt_struct.h"
+void board_init(void) {
+    // USB
+    common_hal_never_reset_pin(&pin_GPIO19);
+    common_hal_never_reset_pin(&pin_GPIO20);
 
-extern int peripherals_pcnt_init(pcnt_config_t pcnt_config);
-extern void peripherals_pcnt_deinit(pcnt_unit_t *unit);
-extern void peripherals_pcnt_reset(void);
+    // Debug UART
+    #ifdef DEBUG
+    common_hal_never_reset_pin(&pin_GPIO43);
+    common_hal_never_reset_pin(&pin_GPIO44);
+    #endif
 
-#endif  // MICROPY_INCLUDED_ESPRESSIF_PERIPHERALS_PCNT_HANDLER_H
+    // SPI Flash and RAM
+    common_hal_never_reset_pin(&pin_GPIO26);
+    common_hal_never_reset_pin(&pin_GPIO27);
+    common_hal_never_reset_pin(&pin_GPIO28);
+    common_hal_never_reset_pin(&pin_GPIO29);
+    common_hal_never_reset_pin(&pin_GPIO30);
+    common_hal_never_reset_pin(&pin_GPIO31);
+    common_hal_never_reset_pin(&pin_GPIO32);
+    common_hal_never_reset_pin(&pin_GPIO33);
+    common_hal_never_reset_pin(&pin_GPIO34);
+    common_hal_never_reset_pin(&pin_GPIO35);
+    common_hal_never_reset_pin(&pin_GPIO36);
+    common_hal_never_reset_pin(&pin_GPIO37);
+}
+
+bool board_requests_safe_mode(void) {
+    return false;
+}
+
+void reset_board(void) {
+
+}
+
+void board_deinit(void) {
+}

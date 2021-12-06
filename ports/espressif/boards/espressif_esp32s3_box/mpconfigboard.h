@@ -3,7 +3,7 @@
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2020 microDev
+ * Copyright (c) 2019 Scott Shawcroft for Adafruit Industries
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,14 +24,13 @@
  * THE SOFTWARE.
  */
 
-#ifndef MICROPY_INCLUDED_ESPRESSIF_PERIPHERALS_PCNT_HANDLER_H
-#define MICROPY_INCLUDED_ESPRESSIF_PERIPHERALS_PCNT_HANDLER_H
+// Micropython setup
 
-#include "driver/pcnt.h"
-#include "soc/pcnt_struct.h"
+#define MICROPY_HW_BOARD_NAME       "ESP32-S3-Box-2.5"
+#define MICROPY_HW_MCU_NAME         "ESP32S3"
 
-extern int peripherals_pcnt_init(pcnt_config_t pcnt_config);
-extern void peripherals_pcnt_deinit(pcnt_unit_t *unit);
-extern void peripherals_pcnt_reset(void);
+#define CIRCUITPY_BOOT_BUTTON (&pin_GPIO0)
 
-#endif  // MICROPY_INCLUDED_ESPRESSIF_PERIPHERALS_PCNT_HANDLER_H
+#define BOARD_USER_SAFE_MODE_ACTION translate("pressing boot button at start up.\n")
+
+#define AUTORESET_DELAY_MS 500
