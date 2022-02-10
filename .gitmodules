@@ -205,3 +205,9 @@
 [submodule "frozen/Adafruit_CircuitPython_HT16K33"]
 	path = frozen/Adafruit_CircuitPython_HT16K33
 	url = https://github.com/adafruit/Adafruit_CircuitPython_HT16K33
+[submodule "frozen/Adafruit_CircuitPython_asyncio"]
+	path = frozen/Adafruit_CircuitPython_asyncio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_asyncio
+[submodule "frozen/Adafruit_CircuitPython_Ticks"]
+	path = frozen/Adafruit_CircuitPython_Ticks
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Ticks

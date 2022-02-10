@@ -17,4 +17,6 @@ CIRCUITPY_USB_VENDOR = 0
 
 FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_Debouncer
 FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_HT16K33
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_asyncio
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_Ticks
 
