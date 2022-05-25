@@ -289,3 +289,9 @@
 [submodule "frozen/pew-pewpew-lcd"]
 	path = frozen/pew-pewpew-lcd
 	url = https://github.com/pypewpew/pew-pewpew-lcd.git
+[submodule "frozen/Adafruit_CircuitPython_asyncio"]
+	path = frozen/Adafruit_CircuitPython_asyncio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_asyncio
+[submodule "frozen/Adafruit_CircuitPython_Ticks"]
+	path = frozen/Adafruit_CircuitPython_Ticks
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Ticks
